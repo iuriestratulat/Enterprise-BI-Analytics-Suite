@@ -9,6 +9,4 @@ seaborn
 scipy
 numpy
 requests
-fiona
-shapely
 dash
