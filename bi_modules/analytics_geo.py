@@ -9,21 +9,24 @@ import requests
 import geopandas as gpd
 import matplotlib.pyplot as plt
 from matplotlib import cm
+# English comment: Import geographical mapping dictionaries for background analytics processing
+from utilities.Countries import city_to_country
+from utilities.DE_regions import city_to_state
 
-# Import dictionaries from your existing modules
+# Import dictionaries from your existing modules inside the utilities package
 try:
-    from Countries import city_to_country
+    from utilities.Countries import city_to_country
 except ImportError:
     # Fallback dictionary if module is missing
     city_to_country = {}
-    print("Warning: Countries module not found. Using empty city_to_country dictionary.")
+    print("Warning: Countries module not found in utilities. Using empty city_to_country dictionary.")
 
 try:
-    from DE_regions import city_to_state
+    from utilities.DE_regions import city_to_state
 except ImportError:
     # Fallback dictionary if module is missing
     city_to_state = {}
-    print("Warning: DE_regions module not found. Using empty city_to_state dictionary.")
+    print("Warning: DE_regions module not found in utilities. Using empty city_to_state dictionary.")
 
 # ============================================================================
 # UTILITY FUNCTIONS

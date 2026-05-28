@@ -2,8 +2,7 @@
 import streamlit as st
 import polars as pl
 from utilities.data_loader import load_parquet_from_gcs
-# English comment: Import both city-to-country mapping and German regional classifications from central utilities
-# English comment: Import geo dictionary from Countries file and regional structure from DE_regions file
+# English comment: Import the correct dictionary variables from their respective utility files
 from utilities.Countries import city_to_country
 from utilities.DE_regions import city_to_state
 
