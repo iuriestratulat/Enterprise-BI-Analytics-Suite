@@ -2,6 +2,7 @@
 import streamlit as st
 import polars as pl
 import pandas as pd
+from utilities.data_loader import load_parquet_from_gcs
 
 # Import backend analytical functions
 from ue_modules.ue_analysis import (
@@ -52,9 +53,9 @@ st.markdown("""
 # Optimized data loading with caching
 @st.cache_data
 def load_ue_data():
-    # Reading cleaned parquet files from the isolated secure data directory
-    deals_df = pl.read_parquet("raw_and_clean_data/deals_ready.parquet")
-    spend_df = pl.read_parquet("raw_and_clean_data/spend_ready.parquet")
+     # Reading cleaned parquet files from the isolated secure data directory
+    deals_df = load_parquet_from_gcs("deals_ready.parquet")
+    spend_df = load_parquet_from_gcs("spend_ready.parquet")
     return deals_df, spend_df
 
 ue_deals, spend = load_ue_data()

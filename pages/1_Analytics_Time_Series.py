@@ -1,6 +1,7 @@
 # English comment: Streamlit page for Module I - Time Series Analysis
 import streamlit as st
 import polars as pl
+from utilities.data_loader import load_parquet_from_gcs
 
 # Import functions directly from your existing analytics backend
 from bi_modules.analytics_time_series import(
@@ -28,8 +29,8 @@ st.markdown("""
 @st.cache_data
 def load_data():
     # Reading cleaned parquet files from the isolated secure data directory
-    deals_df = pl.read_parquet("raw_and_clean_data/deals_ready.parquet")
-    calls_df = pl.read_parquet("raw_and_clean_data/calls_ready.parquet")
+    deals_df = load_parquet_from_gcs("deals_ready.parquet")
+    calls_df = load_parquet_from_gcs("calls_ready.parquet")
     return deals_df, calls_df
 
 # Load the datasets

@@ -1,6 +1,7 @@
 # English comment: Streamlit page for Module IV - Products and Payments Analytics
 import streamlit as st
 import polars as pl
+from utilities.data_loader import load_parquet_from_gcs
 
 # Import all analytical dashboard functions from your products backend
 from bi_modules.analytics_products import (
@@ -32,9 +33,9 @@ st.markdown("""
 
 # Optimized data loading with caching using Polars
 @st.cache_data
-def load_products_data():
-    # This module reads data from deals_ready.parquet
-    deals_df = pl.read_parquet("raw_and_clean_data/deals_ready.parquet")
+def load_data():
+    # Reading cleaned parquet files from the isolated secure data directory
+    deals_df = load_parquet_from_gcs("deals_ready.parquet")
     return deals_df
 
 # Load the core dataset
