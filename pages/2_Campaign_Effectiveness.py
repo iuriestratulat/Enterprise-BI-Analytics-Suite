@@ -31,7 +31,7 @@ st.markdown("""
 
 # Optimized data loading with caching
 @st.cache_data
-def load_data():
+def load_campaign_data():
     # Reading cleaned parquet files from the isolated secure data directory
     deals_df = load_parquet_from_gcs("deals_ready.parquet")
     spend_df = load_parquet_from_gcs("spend_ready.parquet")

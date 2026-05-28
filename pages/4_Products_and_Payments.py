@@ -33,7 +33,7 @@ st.markdown("""
 
 # Optimized data loading with caching using Polars
 @st.cache_data
-def load_data():
+def load_products_data():
     # Reading cleaned parquet files from the isolated secure data directory
     deals_df = load_parquet_from_gcs("deals_ready.parquet")
     return deals_df

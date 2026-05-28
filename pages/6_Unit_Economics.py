@@ -405,7 +405,7 @@ elif analysis_option == "VI.4 Product Metrics Impact (A/B Testing Sample Size)":
             return 'background-color: #f8d7da; color: #721c24; font-weight: bold;'
         return ''
 
-    styled_df = df_ab_pd.style.applymap(style_status_cells)
+    styled_df = df_ab_pd.style.map(style_status_cells) # modified .applymap -> .map, .applymap no more available in pandas
     st.dataframe(styled_df, use_container_width=True, hide_index=True)
     
     status_row = df_ab_pd[df_ab_pd['Metric'] == 'Status']
