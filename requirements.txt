@@ -10,3 +10,5 @@ scipy
 numpy
 requests
 dash
+google-cloud-storage
+google-auth
