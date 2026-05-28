@@ -26,7 +26,7 @@ st.markdown("""
 
 # --- HEADER SECTION ---
 st.title("🚀 Enterprise Business Intelligence Analytics Suite")
-st.markdown("### 🖥️ Senior Data Analyst / BI Engineer Production Portfolio")
+st.markdown("### 📊 Data Analytics & BI Solutions Engineer")
 st.markdown("---")
 
 # --- EXECUTIVE CASE STUDY & ARCHITECTURE BANNER ---
