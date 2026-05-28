@@ -3,7 +3,9 @@ import streamlit as st
 import polars as pl
 from utilities.data_loader import load_parquet_from_gcs
 # English comment: Import both city-to-country mapping and German regional classifications from central utilities
-from utilities.geo_mapping import city_to_country, DE_regions
+# English comment: Import geo dictionary from Countries file and regional structure from DE_regions file
+from utilities.Countries import city_to_country
+from utilities.DE_regions import city_to_state
 
 # Import all analytical and mapping functions from your geographic backend
 from bi_modules.analytics_geo import (
