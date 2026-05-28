@@ -1,0 +1,14 @@
+streamlit
+polars
+pandas
+pyarrow
+plotly
+geopandas
+matplotlib
+seaborn
+scipy
+numpy
+requests
+fiona
+shapely
+dash
