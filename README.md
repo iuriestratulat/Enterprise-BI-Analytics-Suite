@@ -1,9 +1,14 @@
 # Enterprise BI Analytics & Production Data Suite
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit%20App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://stratulat-bi-suite.streamlit.app/)
+[![Python](https://img.shields.io/badge/Python-3.13-blue.svg?style=flat&logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.42-FF4B4B.svg?style=flat&logo=streamlit)](https://streamlit.io/)
+
 An enterprise-grade, cloud-native Business Intelligence platform engineered to process, analyze, and visualize multi-million euro operations. This system bypasses traditional local file storage bottlenecks by utilizing a fully secure, remote architecture powered by **Google Cloud Platform (GCP)** and optimized memory data processing via **Polars**.
 
 🚀 **Live Application:** [Enterprise Business Intelligence Analytics Suite](https://stratulat-bi-suite.streamlit.app/)
 
+> ⚡ *Note: The first load may take 15-30 seconds as the free tier service wakes up.*
 ---
 
 ## 📈 Executive Business Insights & Frameworks
